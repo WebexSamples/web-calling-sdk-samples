@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>@webex/calling Quickstart</title>
+</head>
+
+<body>
+  <section id="authentication">
+    <h2>@webex/calling Quickstart</h2>
+    <div>
+        <fieldset>
+          <legend>Credentials</legend>
+          <div class="u-mv">
+            <input id="access-token" name="accessToken" placeholder="Access Token" value="" type="text" required>
+            <p><button id="init" onclick="init()">Initialize Calling</button></p>
+            <pre id="access-token-status">Not initialized</pre>
+          </div>
+        </fieldset>
+      <!-- authentication-registration -->
+        <fieldset>
+          <legend>Authorization with Webex Calling</legend>
+          <p><button id="authenticate_device" onclick="authorize()">Authorize device</button></p>
+          <pre id="registration-status">Unregistered</pre>
+          <p><button id="deregister_device" onclick="deregister()">Delete Device</button></p>
+        </fieldset>
+    </div>
+  </section>
+
+  <section id="calls">
+    <fieldset>
+      <legend>Calls</legend>
+      <p><input id="destination-number" name="destinationNumber" placeholder="Destination Number" value="" type="text" required></p>
+      <p><button id="call" onclick="makeCall()">Place call</button></p>
+      <p><pre id="call-details">No Call</pre></p>
+      <p><button id="call" onclick="endCall()">End call</button></p>
+    </fieldset>
+  </section>
+
+  <audio id="local-audio" muted="true" autoplay></audio>
+  <audio id="remote-audio" autoplay></audio>
+</body>
+
+<script src="https://unpkg.com/webex@2.59.4-next.2/umd/calling.min.js"></script>
+<script src="app.js"></script>
+
+</html>
