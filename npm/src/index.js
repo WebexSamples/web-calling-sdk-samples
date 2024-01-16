@@ -23,8 +23,7 @@ const webexConfig = {
     dss: {},
   },
   credentials: {
-    access_token:
-      "access token",
+    access_token: "access_token",
   },
 };
 
@@ -48,7 +47,6 @@ const callingConfig = {
 };
 
 async function callingInit() {
-  // Initialize calling
   calling = await Calling.init({
     webexConfig,
     callingConfig,
