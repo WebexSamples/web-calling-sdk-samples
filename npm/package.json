@@ -1,0 +1,28 @@
+{
+  "name": "calling-dummy",
+  "version": "1.0.0",
+  "description": "Dummy app for calling",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "assert": "^2.1.0",
+    "crypto-browserify": "^3.12.0",
+    "http-server": "^14.1.1",
+    "https-browserify": "^1.0.0",
+    "os-browserify": "^0.3.0",
+    "querystring-es3": "^0.2.1",
+    "react-scripts": "^5.0.1",
+    "stream-browserify": "^3.0.0",
+    "stream-http": "^3.2.0",
+    "url": "^0.11.3",
+    "webex": "2.59.8-next.10"
+  },
+  "devDependencies": {
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4"
+  },
+  "scripts": {
+    "start": "http-server ./src -p 1234",
+    "build": "webpack"
+  }
+}
